@@ -1,0 +1,28 @@
+[package]
+name = "aidflow-contract"
+version = "1.0.0"
+edition = "2021"
+description = "AidFlow - On-Chain Donation & Relief System (NEAR smart contract)"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+path = "src/lib.rs"
+
+# Standalone workspace root so parent-folder manifests cannot claim this crate.
+[workspace]
+
+[dependencies]
+near-sdk = "5"
+borsh = "1"
+
+[dev-dependencies]
+near-sdk = { version = "5", features = ["unit-testing"] }
+
+[profile.release]
+codegen-units = 1
+opt-level = "z"
+lto = true
+debug = false
+panic = "abort"
+overflow-checks = true

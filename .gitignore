@@ -1,0 +1,60 @@
+# AidFlow - On-Chain Donation & Relief System
+
+# ============ Secrets & credentials ============
+# NEAR account keys / signing credentials (NEVER commit)
+*.pem
+*.key
+*.p12
+neardev/
+.near-credentials/
+near-credentials/
+**/.near-credentials/
+.env
+.env.*
+!.env.example
+secrets/
+*.secret
+credentials.json
+wallet.json
+
+# ============ Node / Frontend ============
+node_modules/
+dist/
+dist-ssr/
+build/
+.vite/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.yarn/
+
+# Coverage / test output
+coverage/
+.nyc_output/
+*.lcov
+vitest-results/
+
+# ============ Rust / Smart contract ============
+target/
+**/target/
+Cargo.lock.bak
+# Compiled wasm stays out of git (build reproducibly via cargo)
+*.wasm
+
+# ============ Editors / OS ============
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============ Misc ============
+*.log
+.cache/
+tmp/
+.tmp/
